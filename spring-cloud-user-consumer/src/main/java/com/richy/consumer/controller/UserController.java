@@ -1,10 +1,8 @@
 package com.richy.consumer.controller;
 
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,14 +19,12 @@ public class UserController {
 	@Autowired
 	private DiscoveryClient client;
 	
-	private final String USER_USERVICE = "user-service";
+	private final String USER_USERVICE = "http://user-service";
 	
 	@RequestMapping("/findList")
 	@ResponseBody
 	public Object findList(){
-		List<ServiceInstance> list = client.getInstances(USER_USERVICE);
-		ServiceInstance instance = list.get(0);
-		String baseUrl = "http://"+instance.getHost() + ":" + instance.getPort()+"/user/findList";
+		String baseUrl = USER_USERVICE+"/user/findList";
 		return restTemplate.getForEntity(baseUrl, String.class).getBody();
 	}
 }

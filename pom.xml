@@ -12,6 +12,9 @@
 		<module>spring-cloud-user-consumer</module>
 		<module>spring-eureka-server-7002</module>
 		<module>spring-eureka-server-7003</module>
+		<module>spring-cloud-user-service-002</module>
+		<module>spring-cloud-user-service-003</module>
+		<module>spring-cloud-common</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
