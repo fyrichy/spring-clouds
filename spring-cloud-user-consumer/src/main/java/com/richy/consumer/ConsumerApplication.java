@@ -13,9 +13,9 @@ import com.richy.consumer.config.RibbonSelfRule;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//RibbonÊôÓÚ¿Í»§¶ËµÄ¸ºÔØ¾ùºâ¡¡
+//Ribbonæ˜¯å®¢æˆ·ç«¯è´Ÿè½½å‡è¡¡
 @EnableEurekaClient
-//Ìí¼Ó×Ô¶¨Òå¸ºÔØ¾ùºâËã·¨
+//ä½¿ç”¨è‡ªå®šä¹‰è´Ÿè½½å‡è¡¡ç­–ç•¥
 @RibbonClient(name="user-service",configuration=RibbonSelfRule.class)
 public class ConsumerApplication {
 
