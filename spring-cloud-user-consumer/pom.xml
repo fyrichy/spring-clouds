@@ -18,9 +18,9 @@
         </dependency>
         <!-- 使用Ribbo负载均衡 -->
          <dependency>
-		     <groupId>org.springframework.cloud</groupId>
-		     <artifactId>spring-cloud-starter-ribbon</artifactId>
-	    </dependency>
+			 <groupId>org.springframework.cloud</groupId>
+			 <artifactId>spring-cloud-starter-ribbon</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
