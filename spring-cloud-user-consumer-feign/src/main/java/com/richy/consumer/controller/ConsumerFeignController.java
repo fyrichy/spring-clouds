@@ -2,6 +2,7 @@ package com.richy.consumer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,5 +19,11 @@ public class ConsumerFeignController {
 	@ResponseBody
 	public Object findList(){
 		return consumerFeignService.findList();
+	}
+	
+	@RequestMapping("/findById/{id}")
+	@ResponseBody
+	public Object findById(@PathVariable("id") Integer id){
+		return consumerFeignService.findById(id);
 	}
 }

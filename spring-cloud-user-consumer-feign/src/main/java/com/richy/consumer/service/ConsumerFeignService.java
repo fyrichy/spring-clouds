@@ -1,6 +1,7 @@
 package com.richy.consumer.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -10,4 +11,7 @@ public interface ConsumerFeignService {
 
 	@RequestMapping(value="/user/findList",method=RequestMethod.GET)
 	public Object findList();
+	
+	@RequestMapping(value="/user/findById/{id}",method=RequestMethod.GET)
+	public Object findById(@PathVariable("id") Integer id);
 }
