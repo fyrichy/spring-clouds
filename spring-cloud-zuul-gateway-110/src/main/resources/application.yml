@@ -1,0 +1,24 @@
+server:
+  port: 110
+
+spring:
+  application:
+    name: user-service-zuul-gateway-110
+
+zuul:
+  prefix: /richy
+  ignored-services: "*"
+  routes:
+    myuser.serviceId: user-service
+    myuser.path: /myuser/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: gateway-110.com
+    prefer-ip-address: true
+
+info:
+  company: www.richy.com
