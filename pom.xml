@@ -20,6 +20,7 @@
 		<module>spring-cloud-user-service-hystrix-8004</module>
 		<module>spring-cloud-zuul-gateway-110</module>
 		<module>spring-cloud-config-10086</module>
+		<module>spring-cloud-config-10087</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
